@@ -1,0 +1,336 @@
+.container {
+  width: 100%; height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg);
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 52px 20px 16px;
+  flex-shrink: 0;
+  background: var(--color-bg);
+}
+
+.backBtn {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-border);
+  background: var(--color-card);
+  font-size: 18px;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--color-text);
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+.backBtn:hover { background: var(--color-primary-light); }
+
+.title {
+  font-family: 'Baloo 2', cursive;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Hero card */
+.heroCard {
+  background: linear-gradient(135deg, #0F766E, #0D9488);
+  border-radius: 20px;
+  padding: 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: 0 6px 24px rgba(15,118,110,0.3);
+}
+
+.heroLabel {
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.75);
+  letter-spacing: 0.04em;
+}
+
+.heroAmount {
+  font-family: 'Baloo 2', cursive;
+  font-size: 40px;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+}
+
+.heroRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.heroStat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  flex: 1;
+}
+
+.heroStatNum {
+  font-family: 'Baloo 2', cursive;
+  font-size: 16px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.heroStatLabel {
+  font-size: 10px;
+  color: rgba(255,255,255,0.7);
+  font-weight: 600;
+}
+
+.heroDivider {
+  width: 1px; height: 32px;
+  background: rgba(255,255,255,0.25);
+}
+
+/* Section */
+.section { display: flex; flex-direction: column; gap: 10px; }
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sectionTitle {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--color-text);
+  font-family: 'Baloo 2', cursive;
+}
+
+.sectionTotal {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-text-muted);
+}
+
+/* Chart */
+.chartCard {
+  background: var(--color-card);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  height: 100px;
+}
+
+.barWrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  height: 100%;
+  justify-content: flex-end;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+}
+
+.bar {
+  width: 100%;
+  background: var(--color-primary-light);
+  border-radius: 6px 6px 3px 3px;
+  min-height: 8px;
+  transition: background 0.2s;
+}
+
+.barActive .bar {
+  background: var(--color-primary);
+}
+
+.barDay {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-text-muted);
+}
+
+.barLabel {
+  position: absolute;
+  top: -20px;
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--color-primary-dark);
+  white-space: nowrap;
+}
+
+.dayDetail {
+  display: flex;
+  gap: 12px;
+  padding: 8px 0 0;
+  border-top: 1px solid var(--color-border);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-text-muted);
+}
+
+/* Earnings list */
+.earningsList {
+  background: var(--color-card);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+}
+
+.earningItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+.earningItem:last-child { border-bottom: none; }
+
+.earningAvatar {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  background: var(--color-primary-light);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Baloo 2', cursive;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--color-primary-dark);
+  flex-shrink: 0;
+}
+
+.earningInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.earningPassenger {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.earningRoute {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.earningTime {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.earningFare {
+  font-family: 'Baloo 2', cursive;
+  font-size: 18px;
+  font-weight: 800;
+  color: #0F766E;
+  flex-shrink: 0;
+}
+
+/* Monthly card */
+.monthCard {
+  background: var(--color-card);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.monthTitle {
+  font-family: 'Baloo 2', cursive;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.monthGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.monthItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: var(--color-bg);
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.monthNum {
+  font-family: 'Baloo 2', cursive;
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--color-secondary);
+}
+
+.monthLabel {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+/* Bottom nav */
+.bottomNav {
+  display: flex;
+  background: var(--color-nav-bg, var(--color-card));
+  border-top: 1px solid var(--color-border);
+  padding: 8px 0 20px;
+  flex-shrink: 0;
+}
+
+.navItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 10px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  padding: 6px 0;
+  transition: color 0.15s;
+}
+.navItem span:first-child { font-size: 20px; }
+.navItem:hover { color: var(--color-primary-dark); }
+.navActive { color: var(--color-primary-dark) !important; }

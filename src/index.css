@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Nunito:wght@400;500;600;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* LIGHT MODE */
+:root,
+[data-theme="light"] {
+  --color-primary:        #F59E0B;
+  --color-primary-dark:   #D97706;
+  --color-primary-light:  #FDE68A;
+  --color-secondary:      #0F766E;
+  --color-secondary-light:#CCFBF1;
+  --color-accent:         #EF4444;
+  --color-bg:             #FFFBEB;
+  --color-card:           #FFFFFF;
+  --color-text:           #1C1917;
+  --color-text-muted:     #78716C;
+  --color-border:         #E7E5E4;
+  --color-shadow:         rgba(245,158,11,0.15);
+  --color-input-bg:       #FAFAF9;
+  --color-nav-bg:         #FFFFFF;
+  --color-quick-btn:      #F5F5F4;
+  --font-display:         'Baloo 2', cursive;
+  --font-body:            'Nunito', sans-serif;
+  --radius-sm:            8px;
+  --radius-md:            14px;
+  --radius-lg:            22px;
+  --radius-full:          9999px;
+  --shadow-sm:            0 1px 4px rgba(0,0,0,0.08);
+  --shadow-md:            0 4px 16px rgba(0,0,0,0.10);
+  --shadow-lg:            0 8px 32px rgba(0,0,0,0.14);
+  --shadow-glow:          0 4px 24px var(--color-shadow);
+}
+
+/* DARK MODE */
+[data-theme="dark"] {
+  --color-primary:        #FBBF24;
+  --color-primary-dark:   #F59E0B;
+  --color-primary-light:  #78350F;
+  --color-secondary:      #14B8A6;
+  --color-secondary-light:#134E4A;
+  --color-accent:         #F87171;
+  --color-bg:             #0F0F0F;
+  --color-card:           #1C1C1E;
+  --color-text:           #F5F5F5;
+  --color-text-muted:     #A8A29E;
+  --color-border:         #2C2C2E;
+  --color-shadow:         rgba(251,191,36,0.12);
+  --color-input-bg:       #2C2C2E;
+  --color-nav-bg:         #1C1C1E;
+  --color-quick-btn:      #2C2C2E;
+  --font-display:         'Baloo 2', cursive;
+  --font-body:            'Nunito', sans-serif;
+  --radius-sm:            8px;
+  --radius-md:            14px;
+  --radius-lg:            22px;
+  --radius-full:          9999px;
+  --shadow-sm:            0 1px 4px rgba(0,0,0,0.2);
+  --shadow-md:            0 4px 16px rgba(0,0,0,0.3);
+  --shadow-lg:            0 8px 32px rgba(0,0,0,0.4);
+  --shadow-glow:          0 4px 24px var(--color-shadow);
+}
+
+html, body, #root {
+  height: 100%;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.3s, color 0.3s;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-primary-light); border-radius: 99px; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

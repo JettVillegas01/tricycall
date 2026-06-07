@@ -1,0 +1,247 @@
+.container {
+  width: 100%; height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg);
+  overflow: hidden;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 52px 20px 14px;
+  background: var(--color-card);
+  border-bottom: 1px solid var(--color-border);
+}
+.backBtn {
+  background: none; border: none;
+  font-size: 22px; cursor: pointer;
+  color: var(--color-text); padding: 0 4px;
+}
+.title {
+  font-family: var(--font-display);
+  font-size: 20px; font-weight: 800;
+  color: var(--color-text);
+}
+
+.routeCard {
+  background: var(--color-card);
+  margin: 12px 16px;
+  border-radius: var(--radius-lg);
+  padding: 14px 16px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+}
+.routeRow { display: flex; align-items: center; gap: 12px; }
+.dotGreen { width: 12px; height: 12px; border-radius: 50%; background: #10B981; flex-shrink: 0; }
+.dotRed   { width: 12px; height: 12px; border-radius: 50%; background: var(--color-accent); flex-shrink: 0; }
+.dashedLine { width: 2px; height: 18px; background: repeating-linear-gradient(to bottom, var(--color-border) 0px, var(--color-border) 4px, transparent 4px, transparent 8px); margin-left: 5px; }
+.routeInputWrap { flex: 1; }
+.routeLabel { font-size: 10px; color: var(--color-text-muted); font-weight: 600; text-transform: uppercase; display: block; }
+.routeValue { font-size: 14px; font-weight: 600; color: var(--color-text); }
+.destInput {
+  width: 100%; border: none; outline: none;
+  font-size: 14px; font-weight: 600;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: transparent;
+  padding: 2px 0;
+}
+.destInput::placeholder { color: var(--color-text-muted); font-weight: 400; }
+
+.searchResults {
+  background: var(--color-card);
+  border-radius: var(--radius-md);
+  margin: 0 16px;
+  box-shadow: var(--shadow-lg);
+  overflow-y: auto;
+  max-height: 200px;
+  z-index: 10;
+  border: 1px solid var(--color-border);
+}
+.searchingText { padding: 8px 14px; font-size: 12px; color: var(--color-text-muted); }
+.resultItem {
+  display: flex; align-items: center; gap: 10px;
+  width: 100%; padding: 10px 14px;
+  background: none; border: none;
+  border-bottom: 1px solid var(--color-border);
+  cursor: pointer; text-align: left;
+}
+.resultItem:last-child { border-bottom: none; }
+.resultItem:hover { background: #FFFBEB; }
+.resultIcon { font-size: 16px; }
+.resultInfo { flex: 1; }
+.resultName { font-size: 13px; font-weight: 700; color: var(--color-text); display: block; }
+.resultAddr { font-size: 11px; color: var(--color-text-muted); }
+.searchingBar {
+  text-align: center; padding: 8px;
+  font-size: 13px; color: var(--color-text-muted);
+}
+
+.mapArea { flex: 1; min-height: 0; position: relative; margin-top: 8px; }
+.mapContainer { width: 100%; height: 100%; }
+.mapHint {
+  position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%);
+  background: rgba(0,0,0,0.6); color: #fff;
+  border-radius: var(--radius-full);
+  padding: 8px 16px; font-size: 12px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+/* Fare section */
+.fareSection {
+  background: var(--color-card);
+  border-top: 1px solid var(--color-border);
+  padding: 14px 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.distanceRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.distLabel { font-size: 13px; color: var(--color-text-muted); }
+.distValue { font-size: 13px; font-weight: 700; color: var(--color-text); }
+
+.fareOfferBox {
+  background: #FFFBEB;
+  border: 1.5px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+}
+.fareOfferLabel {
+  font-family: var(--font-display);
+  font-size: 14px; font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 2px;
+}
+.fareOfferSub {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  margin-bottom: 12px;
+}
+.fareAdjustRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.fareAdjBtn {
+  background: var(--color-card);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-full);
+  padding: 8px 18px;
+  font-family: var(--font-display);
+  font-size: 14px; font-weight: 800;
+  color: var(--color-text);
+  cursor: pointer;
+}
+.fareAdjBtn:hover { background: var(--color-primary-light); }
+.fareAdjAmt {
+  font-family: var(--font-display);
+  font-size: 32px; font-weight: 800;
+  color: var(--color-secondary);
+  min-width: 80px; text-align: center;
+}
+
+.bookBtn {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+  border: none;
+  border-radius: var(--radius-full);
+  font-family: var(--font-display);
+  font-size: 16px; font-weight: 800;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: var(--shadow-glow);
+  transition: transform 0.15s;
+}
+.bookBtn:hover { transform: translateY(-1px); }
+
+.paymentBox {
+  background: var(--color-surface, #fff);
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 12px;
+  border: 1px solid var(--color-border, #e5e7eb);
+}
+
+.paymentLabel {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-text, #111);
+  margin: 0 0 10px 0;
+}
+
+.paymentOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.paymentBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1.5px solid var(--color-border, #e5e7eb);
+  background: var(--color-bg, #f9fafb);
+  cursor: pointer;
+  text-align: left;
+  position: relative;
+  transition: border-color 0.15s;
+}
+
+.paymentActive {
+  border-color: #F59E0B;
+  background: #FFFBEB;
+}
+
+.paymentIcon {
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.paymentInfo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.paymentName {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text, #111);
+}
+
+.paymentSub {
+  font-size: 11px;
+  color: var(--color-text-secondary, #6b7280);
+}
+
+.paymentCheck {
+  font-size: 16px;
+  color: #F59E0B;
+  font-weight: 800;
+  margin-right: 6px;
+}
+
+.preferredBadge {
+  position: absolute;
+  top: -8px;
+  right: 10px;
+  background: #F59E0B;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 99px;
+}
